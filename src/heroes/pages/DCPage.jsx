@@ -3,7 +3,7 @@ import { HeroesList } from '../components/HeroesList'
 
 export const DCPage = () => {
   return (
-    <div className='container'>
+    <div >
       <h1>DCPage</h1>
       <hr />
 

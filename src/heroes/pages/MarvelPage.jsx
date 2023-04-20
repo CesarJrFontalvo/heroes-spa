@@ -3,7 +3,7 @@ import { HeroesList } from '../components/HeroesList'
 
 export const MarvelPage = () => {
   return (
-    <div className='container'>
+    <div >
     <h1>MarvelPage</h1>
     <hr />
 

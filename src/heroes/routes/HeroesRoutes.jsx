@@ -8,7 +8,10 @@ export const HeroesRoutes = () => {
 
         <>
             <Navbar />
-            <Outlet />
+            <div className='container'>
+                <Outlet  />
+            </div>
+
         </>
 
     )
