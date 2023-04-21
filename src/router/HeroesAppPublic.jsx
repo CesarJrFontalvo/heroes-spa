@@ -1,8 +1,8 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import { Navbar } from './ui'
+import { Navbar } from '../ui'
 
-export const HeroesApp = () => {
+export const HeroesAppPublic = () => {
     return (
         <div className='container'>
             {/* <Navbar /> */}

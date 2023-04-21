@@ -6,12 +6,11 @@ import {
   Route,
 } from "react-router-dom";
 import './styles.css'
-import { AppRouter } from './router/AppRouter';
-import { RoutesHero } from './heroes/routes/RoutesHero';
+import { HeroApp } from './HeroApp';
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-      <RoutesHero />
-      {/* <AppRouter/> */}
+   <HeroApp/>
   </React.StrictMode>,
 )

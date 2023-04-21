@@ -2,7 +2,7 @@ import React from 'react'
 import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { HeroesRoutes } from './HeroesRoutes';
 import { DCPage, MarvelPage, SearchPage } from '../pages';
-import { HeroesApp } from '../../HeroesApp';
+import { HeroesAppPublic } from '../../router/HeroesAppPublic';
 import { LoginPage } from '../../auth';
 import { Heropage } from '../pages/HeroPage';
 
@@ -39,7 +39,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/',
-    element: <HeroesApp />,
+    element: <HeroesAppPublic />,
     children: [
 
 

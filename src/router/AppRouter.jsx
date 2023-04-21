@@ -1,43 +1,30 @@
 import React from 'react'
 import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom';
-import { HeroesApp } from '../HeroesApp';
-import { DCPage, MarvelPage } from '../heroes';
+import { HeroesAppPublic } from './HeroesAppPublic';
 import { LoginPage } from '../auth';
-import { HeroesRoutes } from '../heroes/routes/HeroesRoutes';
+// import { DCPage, MarvelPage } from '../heroes';
+
+// import { HeroesRoutes } from '../heroes/routes/HeroesRoutes';
 
 
 
  
 const router = createBrowserRouter([
-  // {
-  //   path: '/',
-  //   element: <HeroesRoutes />,
-  //   children: [
-  //     {
-  //       path: 'marvel',
-  //       element: <MarvelPage />,
-  //   },
-  //   {
-  //       path: 'dc',
-  //       element: <DCPage />,
-  //   },
-    
-  //   {
-  //       path: '/',
-  //       element: <Navigate to='/marvel' />,
-  //   }
-  
-  //   ],
-  // },
   {
     path: '/',
-    element: <HeroesApp />,
+    element: <HeroesAppPublic />,
     children: [
-    {
+
+
+      {
         path: 'login',
         element: <LoginPage />,
-    },
-  
+      },
+      
+      {
+        path: '/',
+        element: <Navigate to='/login' />,
+      }
     ],
   }
 ]);
