@@ -26,11 +26,11 @@ export const SearchPage = () => {
   }
   return (
     <div >
-      <h1>Search</h1>
-      <hr />
+      <h1 className='span-user'>Search</h1>
+      <hr  className='span-user'/>
 
       <div className='row'>
-        <div className="col-5">
+        <div className="col-12 col-md-5 col-lg-5 mb-4">
           <h4>Searching</h4>
 
           <hr />
@@ -51,7 +51,7 @@ export const SearchPage = () => {
           </form>
         </div>
 
-        <div className="col-7 ">
+        <div className="col-12 col-md-7 col-lg-7">
           <h4>Result</h4>
           <hr />
 

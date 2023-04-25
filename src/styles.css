@@ -1,15 +1,29 @@
-body{
+body {
     background-color: #00337C;
     color: white;
 }
 
-.responsive-card{
+.responsive-card {
     display: grid;
     grid-template-columns: repeat(auto-fit,
-    minmax(200px, 1fr));
+            minmax(200px, 1fr));
     gap: 20px;
 }
 
-li{
+li {
     list-style-type: none;
+}
+
+.button-Logout {
+    justify-content: end;
+}
+
+@media (max-width: 576px) {
+    .span-user {
+        display: none;
+    }
+
+    .button-Logout {
+        justify-content: start;
+    }
 }

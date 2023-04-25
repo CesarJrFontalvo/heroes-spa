@@ -56,15 +56,15 @@ export const Navbar = () => {
                 </div>
             </div>
 
-            <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
+            <div className="button-Logout navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex ">
                 <ul className="navbar-nav ml-auto">
-                    <span className='nav-item nav-link text-primary'>
+                    <span className='nav-item nav-link text-primary span-user'>
                         {user?.name}
 
                     </span>
 
                     <button
-                        className='nav-item v-link btn btn-info text-white'
+                        className=' nav-item v-link btn btn-info text-white'
                         onClick={onLogout}
                     >
                         Logout

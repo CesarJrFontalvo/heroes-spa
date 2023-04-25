@@ -22,11 +22,11 @@ export const Heropage = () => {
   return (
 
     <div className=' row mt-2 mb-2'>
-      <div className="col-4">
+      <div className="col-6 col-md-4 col-lg-4">
         <img src={heroImageUrl} alt={hero.superhero} className='bg-dark img-thumbnail animate__animated animate__fadeInLeft' />
       </div>
 
-      <div className="col-8">
+      <div className="col-6 col-md-8 col-lg-8">
         <h3>{hero.superhero}</h3>
         <ul className='list-groud lits-grout-flush  '>
           <li className='list-groud-item'><b>Alter ego:</b> {hero.alter_ego}</li>
