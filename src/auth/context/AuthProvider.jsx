@@ -1,6 +1,6 @@
 import { useReducer } from "react"
 import { AuthContext } from "./AuthContext"
-import { authReducer } from "./AuthReducer"
+// import { authReducer } from "./AuthReducer"
 import { types } from "../types/types"
 
 // const initialState = {
@@ -17,6 +17,29 @@ const init = () => {
 }
 
 export const AuthProvider = ({ children }) => {
+
+    const authReducer = (state = {}, action) => {
+
+        switch (action.type) {
+            case types.login:
+                return {
+                    ...state,
+                    logged: true,
+                    user: action.payload
+                };
+
+            case types.logout:
+                return {
+                    logged: false
+                };
+
+            default:
+                return state;
+
+        }
+    };
+
+    
     const [authState, dispatch] = useReducer(authReducer, {}, init);
 
     const login = (name = '') => {
@@ -30,7 +53,7 @@ export const AuthProvider = ({ children }) => {
 
     const logout = () => {
         localStorage.removeItem('user');
-        const action = {type: types.logout};
+        const action = { type: types.logout };
         dispatch(action);
     };
 
@@ -38,7 +61,7 @@ export const AuthProvider = ({ children }) => {
         <AuthContext.Provider value={{
             ...authState,
             login: login,
-            logout:logout
+            logout: logout
         }}>
             {children}
         </AuthContext.Provider>
