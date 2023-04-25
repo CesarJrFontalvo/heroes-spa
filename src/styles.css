@@ -1,3 +1,15 @@
-/* body{
-    background-color: #FFF8EA;
-} */
+body{
+    background-color: #00337C;
+    color: white;
+}
+
+.responsive-card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,
+    minmax(200px, 1fr));
+    gap: 20px;
+}
+
+li{
+    list-style-type: none;
+}

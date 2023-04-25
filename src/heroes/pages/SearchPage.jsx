@@ -45,13 +45,13 @@ export const SearchPage = () => {
               onChange={onInputChange}
             />
 
-            <button className='btn btn-outline-primary mt-2'>
+            <button className='btn btn-info text-dark mt-2'>
               Search
             </button>
           </form>
         </div>
 
-        <div className="col-7">
+        <div className="col-7 ">
           <h4>Result</h4>
           <hr />
 

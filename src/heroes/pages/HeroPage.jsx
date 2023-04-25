@@ -23,12 +23,12 @@ export const Heropage = () => {
 
     <div className=' row mt-2 mb-2'>
       <div className="col-4">
-        <img src={heroImageUrl} alt={hero.superhero} className='img-thumbnail animate__animated animate__fadeInLeft' />
+        <img src={heroImageUrl} alt={hero.superhero} className='bg-dark img-thumbnail animate__animated animate__fadeInLeft' />
       </div>
 
       <div className="col-8">
         <h3>{hero.superhero}</h3>
-        <ul className='list-groud lits-grout-flush'>
+        <ul className='list-groud lits-grout-flush  '>
           <li className='list-groud-item'><b>Alter ego:</b> {hero.alter_ego}</li>
           <li className='list-groud-item'><b>Publisher:</b> {hero.publisher}</li>
           <li className='list-groud-item'><b>First appearance:</b> {hero.first_appearance}</li>
@@ -39,7 +39,7 @@ export const Heropage = () => {
 
         <button
           onClick={onNavigateBack}
-          className='btn btn-outline-primary'>
+          className='btn btn-info  '>
           Regresar
         </button>
       </div>
