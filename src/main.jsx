@@ -7,10 +7,13 @@ import {
 } from "react-router-dom";
 import './styles.css'
 import { HeroApp } from './HeroApp';
+import { AuthProvider } from './auth/context/AuthProvider';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-   <HeroApp/>
+    <AuthProvider>
+      <HeroApp />
+    </AuthProvider>
   </React.StrictMode>,
 )

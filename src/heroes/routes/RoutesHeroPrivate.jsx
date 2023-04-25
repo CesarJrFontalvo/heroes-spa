@@ -2,8 +2,6 @@ import React from 'react'
 import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { HeroesRoutes } from './HeroesRoutes';
 import { DCPage, MarvelPage, SearchPage } from '../pages';
-import { HeroesAppPublic } from '../../router/HeroesAppPublic';
-import { LoginPage } from '../../auth';
 import { Heropage } from '../pages/HeroPage';
 
 
@@ -13,6 +11,10 @@ const router = createBrowserRouter([
     path: '/',
     element: <HeroesRoutes />,
     children: [
+      {
+        path: '/',
+        element: <MarvelPage />,
+      },
       {
         path: 'marvel',
         element: <MarvelPage />,
@@ -29,34 +31,18 @@ const router = createBrowserRouter([
         path: 'hero/:id',
         element: <Heropage />,
       },
-
       {
-        path: '/',
+        path: '/*',
         element: <Navigate to='/marvel' />,
       }
 
     ],
   },
-  {
-    path: '/',
-    element: <HeroesAppPublic />,
-    children: [
-
-
-      {
-        path: 'login',
-        element: <LoginPage />,
-      },
-      
-      {
-        path: '/',
-        element: <Navigate to='/marvel' />,
-      }
-    ],
-  }
 
 ]);
-export const RoutesHero = () => {
+
+
+export const RoutesHeroPrivate = () => {
   return (
     <RouterProvider router={router} />
   )
