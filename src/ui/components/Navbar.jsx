@@ -20,8 +20,8 @@ export const Navbar = () => {
                 className="navbar-brand"
                 to="/"
             >
-                <img src='logo.png' className='card-img mx-3' alt='Logo' style={{ width: '35px', height: '35px', borderRadius: '100px' }} />
-                Heros
+                <img src='logo.png' className='card-img mx-2' alt='Logo' style={{ width: '35px', height: '35px', borderRadius: '100px' }} />
+               
             </Link>
 
             <div className="navbar-collapse">
@@ -64,7 +64,7 @@ export const Navbar = () => {
                     </span>
 
                     <button
-                        className='nav-item nav-link btn'
+                        className='nav-item v-link btn btn-info text-white'
                         onClick={onLogout}
                     >
                         Logout
